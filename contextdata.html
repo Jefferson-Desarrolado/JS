@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <div id="nombre">LapTop</div>
+      <button id="validar">Validar</button>
+      <form id="formulario" action="">
+        <div id="equipo">LapTop</div>
+        <button id="problema">Validar</button>
+      </form>
+</body>
+</html>
+<script>
+    let base=document.getElementById("validar");
+    let mensaje=document.getElementById("nombre");
+    base.addEventListener("click",()=>{mensaje.textContent="PC GAMER"})
+
+    let texto=document.getElementById("equipo");
+    
+    if(texto.parentNode.id==="formulario"){
+        alert("es un  formulario ")
+        if(texto.textContent==="LapTop"){
+            alert("es laptop")
+        }else{
+            alert("desconocido");
+        }
+    }else{
+        alert("no es un formulario ")
+    }
+</script>

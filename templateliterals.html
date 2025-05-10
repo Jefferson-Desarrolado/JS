@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo Template Literals</title>
+</head>
+<body>
+    <div id="equipo"></div>
+    <button id="add">Generar Equipo</button>
+    <script>
+        // Seleccionamos el div y el botón
+        const equipo = document.getElementById('equipo');
+        const boton = document.getElementById('add');
+
+        // Generamos contenido dinámico al hacer clic
+        boton.addEventListener('click', () => {
+            const array = ["HP", "PAVILON", "AZUZ"];
+            let plantilla = '';
+            for (let marca of array) {
+                plantilla += `<div>Equipo: ${marca}</div>`;
+            }
+            equipo.innerHTML = plantilla;
+        });
+    </script>
+</body>
+</html>

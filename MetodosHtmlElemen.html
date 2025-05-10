@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métodos de Atributos en el DOM</title>
+</head>
+<body >
+    <h1>Métodos de Atributos: Ejemplos y Ejercicios</h1>
+    <p id="pagina">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum,
+         esse ad est fugiat, eaque adipisci, assumenda reprehenderit minus
+         quos nihil illo
+         officia corporis quas animi iusto? Pariatur similique asperiores et.</p>
+
+    <p class="hola">hola</p>
+    <p class="mundo">chao</p>
+    <p class="hola">adios</p>
+    <h1>Titulo</h1>
+    <div class="contenedor">
+        <p id="parte">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, officiis. Aperiam, culpa commodi temporibus labore nisi ipsa dolorum maiores fugiat quo ipsam quaerat molestias maxime exercitationem, officiis laborum nemo voluptatibus.</p>
+
+    </div>
+   
+</body>
+</html>
+<script>
+   /*
+   ID #
+   CLASE .
+   Ejercicio1
+    const hola=()=>{
+        alert("hola cambiamos el p por que presionaste un clic ")
+        document.body.textContent="Nuevo parrafo";
+        document.body.setAttribute("id","cuerpo");
+
+
+    
+    };
+    let  body=document.body;
+    body.addEventListener("click",hola);
+   
+   */
+  /*
+   const hola=()=>{
+        alert("hola cambiamos el p por que presionaste un clic ")
+        document.body.textContent="Nuevo parrafo";
+        document.body.setAttribute("id","cuerpo");
+        document.body.style.background="red";
+
+
+    
+    };
+    let  body=document.body;
+    body.addEventListener("click",hola);
+  */
+ //Pasamos a los metodos de seleccion 
+/*
+getelementbyid
+    let body=document.body;
+    const hola=()=>
+{
+    alert("Presionaste click y cambio")
+    let cambioP=document.getElementById("pagina");
+    cambioP.style.color="red";
+    cambioP.textContent="<h2>Como estan Amigos</h2>"
+};
+    body.addEventListener("click",hola);
+  
+*/
+/*
+GETELEMENTCLASNAME
+let cuerpo=document.body;
+const hola=()=>
+    {
+        let cambio=document.body.getElementsByClassName("hola");
+        
+        cambio[0].textContent="soy nuevo";
+        cambio[0].style.backgroundColor = "red";
+        cambio[1].style.backgroundColor = "red";
+        alert(cambio.length);
+    };
+cuerpo.addEventListener("click",hola);
+*/
+//GETELEMENTTAGNAME
+/*
+let cuerpo=document.body;
+
+const hola=()=>
+    {
+        let PTagTodos=document.getElementsByTagName("p");
+        PTagTodos[0].textContent="hola soy nuevo remplazo";
+        PTagTodos[0].style.color="Blue";
+        PTagTodos[1].style.color="red";    
+        PTagTodos[2].style.color="green";  
+        PTagTodos[3].style.color="pink"; 
+        alert("hay +"+ divTagTodos.length)   
+    };
+cuerpo.addEventListener("click",hola);
+*/
+///Metodos Avanzados de htmlDocument 
+//QuerySelector
+//let cuerpo=document.body;
+/*
+const hola=()=>
+    {   
+        let cambio=document.querySelector("#pagina")
+        cambio.textContent="soy un queryselector";
+        cambio.style.color="red";
+        let cambioPuntoClase=document.querySelectorAll(".hola");
+        cambioPuntoClase.textContent="Soy una clase me llaman con punto";
+        cambioPuntoClase[0].style.color="pink";
+        cambioPuntoClase[1].style.color="green";
+
+    };
+cuerpo.addEventListener("click",hola);
+*/
+//Metodos de verificacion maches closets 
+let cuerpo=document.getElementById("pagina");
+console.log(cuerpo.matches("#pagina"));
+console.log(cuerpo.matches(".pagina"));
+//metodo closet
+let b=document.getElementById("parte");
+let existe=b.closest(".contenedddor");     
+
+existe.style.color="red";
+console.log(existe.getAttribute("class"));
+
+</script>

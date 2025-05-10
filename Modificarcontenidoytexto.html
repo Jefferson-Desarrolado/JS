@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="clasevid">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique molestias exercitationem ducimus quae facilis tempora repellat, hic vitae blanditiis nam omnis ipsam veritatis voluptate nemo, praesentium saepe laboriosam mollitia sequi!</p>
+    </div>
+    <div id="clasevidDos">
+        <p>amigo mio</p>
+    </div>
+    <div id="mensaje">Teclado Roto</div>
+    <button id="boton">Actualizar</button>
+
+    <div id="equipo"></div>
+    <button id="add">Generar Equipo</button>
+    
+</body>
+</html>
+<script>
+    let cuerpoDiv=document.getElementById("clasevid");
+    alert(cuerpoDiv.innerHTML)
+    cuerpoDiv.innerHTML="<h1>Titulo</h1>"
+    let cuerpo=document.getElementById("boton");
+    cuerpo.addEventListener("click",()=>{
+        let divContenido=document.getElementById("mensaje");
+        divContenido.innerHTML="<Strong>Pantalla rota</Strong>"
+    })
+    /*
+    const error = document.getElementById('error');
+const boton = document.getElementById('validar');
+
+boton.addEventListener('click', () => {
+  if (error.parentNode.id === 'formulario') {
+    if (error.innerHTML === 'Sin errores') {
+      error.innerHTML = '<p class="rojo">Error: Falta equipo</p>';
+    } else {
+      error.innerHTML = '<p>Sin errores</p>';
+    }
+  }
+});
+    */
+  
+   
+/*
+   let bn=document.addEventListener("click",()=>{
+        let bt=document.getElementById("equipo");
+        let array=["HP","PAVILON","AZUZ"];
+     
+        
+        bt.innerHTML="<ul>"+array.map(m=>"<li>"+m+"</li>").join("\n")+"</ul>";
+   });
+
+*/
+
+  
+  let booton=document.getElementById("add");
+  booton.addEventListener("click",()=>{
+    let cuerpoDiv=document.getElementById("equipo");
+    let array=["HP","PAVILON","AZUZ"];
+    let cadena="";
+
+
+    for(i=0;i<=array.length-1;i++)
+    {
+      cadena+="<div>"+array[i]+"</div>";
+    }
+    
+    cuerpoDiv.innerHTML=cadena;
+    const divs = equipo.getElementsByTagName('div');
+  for (let i = 0; i < divs.length; i++) {
+    divs[i].setAttribute('data-marca', array[i]);
+  }
+  console.log('Nodos:', equipo.childNodes.length);
+  });
+
+
+</script>

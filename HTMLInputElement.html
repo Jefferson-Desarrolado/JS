@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo .value para Reportes</title>
+</head>
+<body>
+    <div id="mensaje">Sin reporte</div>
+    <input id="filtro-equipo" value="HP">
+    <button id="boton">Generar </button>
+
+    <div id="formulario">
+        <input id="fechaF" value="2025-04-16">
+        <div id="mensajeF">Sin reporte</div>
+      </div>
+      <button id="botonF">Generar Reporte</button>
+      <div id="mensaje">Sin reporte</div>
+      <select id="equipo">
+        
+      </select>
+      <button id="generar">Cargar Equipos</button>
+     
+    <script>
+      let mesnaje=document.getElementById("mensaje");
+      let caja=document.getElementById("filtro-equipo");
+      let boton=document.getElementById("boton");
+      console.log(caja.value)
+      boton.addEventListener("click",()=>{
+        const equipoIngresado=caja.value;
+        mesnaje.innerHTML=`<p>Equipo Reportado${equipoIngresado}</p>`
+        caja.value='';
+      })
+
+      let botonFecha=document.getElementById("botonF");
+      let cajafecha=document.getElementById("fechaF")
+      let divReporte=document.getElementById("mensaje")
+      botonFecha.addEventListener("click",()=>{
+        if(cajafecha.parentNode.id="formulario"){
+            if(botonFecha.value===''){
+                alert("vacio")
+            }else{
+                divReporte.innerHTML=`<p>${cajafecha.value}</p>`
+            }
+            
+        }else{
+            alert("No existe este formulario ")
+        }
+      })
+
+      let botonGenerarLista=document.getElementById("generar");
+      botonGenerarLista.addEventListener("click",()=>{
+        let drop=document.getElementById("equipo");
+        const array = ["HP", "PAVILON", "AZUZ"];
+        let lis="";
+        for(i=0;i<array.length;i++)
+        {
+            lis+="<option values="+(i+1)+" > "+array[i] +" </option>";
+        }   
+        drop.innerHTML=lis;
+      
+       
+      })
+      let papaHijos=document.getElementById("formulario");
+      console.log(papaHijos.childNodes)
+      
+
+
+    </script>
+
+</body>
+</html>

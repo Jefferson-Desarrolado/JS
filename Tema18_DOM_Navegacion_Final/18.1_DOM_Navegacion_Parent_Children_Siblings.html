@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div id="holasoypadre" class="clases">
+        <label id="label1">hola</label>
+        <!-- Un comentario -->
+        <span>¡Élite!</span>
+        <button id="boton">aplasta</button>
+        <p id="uno">pagina1</p>
+        <p id="dos">pagina2</p>
+        <p id="tres">pagina3</p>
+   </div>
+</body>
+</html>
+<script>
+    //Devuelve la parte padre si e sid el padr eid pero todo lo que este dentro 
+   /*
+    let accion=document.getElementById("boton");
+    accion.addEventListener("click",()=>
+        {
+            alert("Presionaste el boton");
+            let accion1=document.getElementById("boton");
+            accion1.style.color="red";
+            accion1.style.background="pink";
+            let padre=accion1.parentNode;
+            alert(padre.id);
+        });
+   */
+  //childnode //solo funciona en ids
+    let dentrodeuncontenedor=document.getElementById("holasoypadre");
+    let hijos=dentrodeuncontenedor.childNodes;
+    hijos.forEach((nodo, indice) => {
+      console.log(`Nodo ${indice}:`, nodo);
+    });
+    let frutas=["manzana","pera","sandia"];
+    frutas.forEach((hola,numero)=>{console.log(hola+" "+numero)})
+//nextSibling
+    let base=document.getElementById("uno");
+    let numa=base.nextSibling;
+    console.log(numa.id)
+    let base1=document.getElementById("dos");
+    let numa1=base.previousSibling;
+    console.log(numa1)
+</script>
